@@ -8,10 +8,28 @@
 
 #import <Foundation/Foundation.h>
 
+NSNumber* getMax(NSArray *array){
+    
+    NSNumber *max = array[0];
+    
+    for (NSNumber *num in array) {
+        if(num.doubleValue > max.doubleValue){
+            max = num;
+        }
+    }
+    return max;
+}
+                                          
+                                          
+
+                                          
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSArray *nums =[[NSArray alloc] initWithObjects:
+                        @65, @45, @123, @-3, @122, nil];
+        
+        NSLog(@"max is %@\n", getMax(nums));
     }
     return 0;
 }
