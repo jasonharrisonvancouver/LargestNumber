@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (NSNumber*) largestNumber: (NSArray *) arr;
+- (NSNumber*) smallestNumber: (NSArray *) arr;
+- (double) medianNumber: (NSArray *) arr;
 
 
 @end
